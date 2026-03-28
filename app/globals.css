@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --border: #1e1e2e;
+  --accent: #00d4ff;
+  --accent-2: #7c3aed;
+  --text: #e2e8f0;
+  --muted: #64748b;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--bg);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+  }
+}
+
+@layer components {
+  .theme-bg {
+    background-color: var(--bg);
+  }
+
+  .theme-surface {
+    background-color: var(--surface);
+  }
+
+  .theme-border {
+    border-color: var(--border);
+  }
+
+  .theme-accent {
+    color: var(--accent);
+  }
+
+  .theme-text {
+    color: var(--text);
+  }
+
+  .theme-muted {
+    color: var(--muted);
+  }
+
+  .accent-bg {
+    background-color: var(--accent);
+  }
+
+  .accent-border {
+    border-color: var(--accent);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 15px rgba(var(--accent-rgb, 0 212 255) / 0.3);
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-24;
+  }
+
+  .card-base {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    @apply rounded-xl p-6 transition-all duration-300 relative overflow-hidden;
+  }
+
+  .card-base:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+    box-shadow: 0 8px 32px -8px color-mix(in srgb, var(--accent) 20%, transparent),
+      0 2px 12px -4px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .card-hover {
+    @apply hover:scale-[1.01];
+  }
+
+  .btn-primary {
+    background-color: var(--accent);
+    color: var(--bg);
+    @apply px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    @apply px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 hover:border-current hover:scale-105 active:scale-95;
+  }
+
+  .btn-ghost {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    @apply px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .btn-ghost:hover {
+    background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  .nav-link {
+    color: var(--muted);
+    @apply text-sm font-medium transition-colors duration-200 hover:text-current;
+  }
+
+  .nav-link:hover {
+    color: var(--text);
+  }
+
+  .section-tag {
+    color: var(--accent);
+    @apply text-xs font-mono uppercase tracking-widest mb-3;
+  }
+
+  .section-heading {
+    color: var(--text);
+    @apply text-3xl sm:text-4xl font-bold mb-4 leading-tight;
+  }
+
+  .section-subheading {
+    color: var(--muted);
+    @apply text-lg max-w-2xl;
+  }
+
+  .terminal-text {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Pulse slow animation for hero orbs */
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Legacy scan-animation (kept for reference) */
+@keyframes scan-animation {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+/* Typewriter cursor */
+.typewriter-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Fade in up animation for achievement cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out both;
+}

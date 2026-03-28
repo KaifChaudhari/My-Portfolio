@@ -1,0 +1,45 @@
+{
+  "username": "kaifchaudhari",
+  "rank": "Top 20%",
+  "roomsCompleted": 44,
+  "badgesCount": 4,
+  "badges": [
+    {
+      "name": "cat linux.txt",
+      "description": "Being competent in Linux",
+      "rarity": "Common · 38.5%",
+      "icon": "terminal",
+      "color": "#88cc14"
+    },
+    {
+      "name": "Webbed",
+      "description": "Understands how the web works",
+      "rarity": "Common · 29.1%",
+      "icon": "globe",
+      "color": "#38bdf8"
+    },
+    {
+      "name": "3 Day Streak",
+      "description": "Achieving a 3 day hacking streak",
+      "rarity": "Common · 40.8%",
+      "icon": "flame",
+      "color": "#fb923c"
+    },
+    {
+      "name": "Advent of Cyber 2025",
+      "description": "Completing Advent of Cyber 2025",
+      "rarity": "Rare · 7.9%",
+      "icon": "gift",
+      "color": "#c084fc"
+    }
+  ],
+  "skills": [
+    { "name": "Linux", "level": 85, "color": "#88cc14" },
+    { "name": "Web Exploitation", "level": 70, "color": "#38bdf8" },
+    { "name": "Networking", "level": 75, "color": "#fb923c" },
+    { "name": "Cryptography", "level": 45, "color": "#c084fc" },
+    { "name": "Privilege Escalation", "level": 60, "color": "#f43f5e" },
+    { "name": "OSINT", "level": 55, "color": "#14b8a6" }
+  ],
+  "lastUpdated": "2026-03-28T09:30:00Z"
+}
