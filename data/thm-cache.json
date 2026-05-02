@@ -34,12 +34,36 @@
     }
   ],
   "skills": [
-    { "name": "Linux", "level": 85, "color": "#88cc14" },
-    { "name": "Web Exploitation", "level": 70, "color": "#38bdf8" },
-    { "name": "Networking", "level": 75, "color": "#fb923c" },
-    { "name": "Cryptography", "level": 45, "color": "#c084fc" },
-    { "name": "Privilege Escalation", "level": 60, "color": "#f43f5e" },
-    { "name": "OSINT", "level": 55, "color": "#14b8a6" }
+    {
+      "name": "Linux",
+      "level": 85,
+      "color": "#88cc14"
+    },
+    {
+      "name": "Web Exploitation",
+      "level": 70,
+      "color": "#38bdf8"
+    },
+    {
+      "name": "Networking",
+      "level": 75,
+      "color": "#fb923c"
+    },
+    {
+      "name": "Cryptography",
+      "level": 45,
+      "color": "#c084fc"
+    },
+    {
+      "name": "Privilege Escalation",
+      "level": 60,
+      "color": "#f43f5e"
+    },
+    {
+      "name": "OSINT",
+      "level": 55,
+      "color": "#14b8a6"
+    }
   ],
-  "lastUpdated": "2026-03-28T09:30:00Z"
+  "lastUpdated": "2026-05-02T07:26:56.359Z"
 }
