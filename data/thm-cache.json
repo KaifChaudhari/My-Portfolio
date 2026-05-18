@@ -65,6 +65,5 @@
       "color": "#14b8a6"
     }
   ],
-  "lastUpdated": "2026-05-17T08:15:55.024Z",
-  "_scrapeError": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://tryhackme.com/r/p/kaifchaudhari\", waiting until \"networkidle\"\n"
+  "lastUpdated": "2026-05-18T09:53:18.913Z"
 }
